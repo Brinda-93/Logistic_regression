@@ -111,9 +111,6 @@ Epoch : 489/500, Loss:0.5162254571914673
 Epoch : 499/500, Loss:0.5142671465873718
 ```
 
-A decision boundary graph is displayed to visualize the classification performance.
-![Decision Boundary](graph.png)
-
 ## Author
 
 Brinda Navakumar
