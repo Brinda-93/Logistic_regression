@@ -34,50 +34,50 @@ python logistic_regression.py
 
 ## Logistic Regression Explained
 
-### **1 How It Works**
+### **1️ How It Works**
 #### **Step 1: Linear Combination of Inputs**
 Like Linear Regression, Logistic Regression first computes a weighted sum of input features:  
-\[
-z = w_1x_1 + w_2x_2 + ... + w_nx_n + b
-\]
+```
+z = w₁x₁ + w₂x₂ + ... + wₙxₙ + b
+```
 where:
-- \( w_1, w_2, ..., w_n \) are the model’s weights  
-- \( x_1, x_2, ..., x_n \) are input features  
-- \( b \) is the bias term  
+- `w₁, w₂, ..., wₙ` are the model’s weights  
+- `x₁, x₂, ..., xₙ` are input features  
+- `b` is the bias term  
 
 #### **Step 2: Sigmoid Activation**
-To convert \( z \) into a probability, we apply the **sigmoid function**:
-\[
-\sigma(z) = \frac{1}{1 + e^{-z}}
-\]
-This function maps \( z \) to a value between **0 and 1**, which can be interpreted as the probability of belonging to class **1**.
+To convert `z` into a probability, we apply the **sigmoid function**:
+```
+σ(z) = 1 / (1 + e⁻ᶻ)
+```
+This function maps `z` to a value between **0 and 1**, which can be interpreted as the probability of belonging to class **1**.
 
 #### **Step 3: Decision Rule**
-- If \( \sigma(z) \geq 0.5 \), classify as **1 (Positive Class)**  
-- If \( \sigma(z) < 0.5 \), classify as **0 (Negative Class)**  
+- If `σ(z) ≥ 0.5`, classify as **1 (Positive Class)**  
+- If `σ(z) < 0.5`, classify as **0 (Negative Class)**  
 
-### **2 Loss Function: Binary Cross-Entropy**
+### **2️ Loss Function: Binary Cross-Entropy**
 Logistic Regression uses **Binary Cross-Entropy (Log Loss)** to measure prediction error:
-\[
-\text{Loss} = - \frac{1}{m} \sum_{i=1}^{m} \left[ y_i \log (\hat{y}_i) + (1 - y_i) \log (1 - \hat{y}_i) \right]
-\]
+```
+Loss = - (1/m) * Σ [yᵢ log(ŷᵢ) + (1 - yᵢ) log(1 - ŷᵢ)]
+```
 where:  
-- \( y_i \) is the actual class label (0 or 1)  
-- \( \hat{y}_i \) is the predicted probability  
-- \( m \) is the number of samples  
+- `yᵢ` is the actual class label (0 or 1)  
+- `ŷᵢ` is the predicted probability  
+- `m` is the number of samples  
 
 Cross-entropy loss **penalizes incorrect confident predictions heavily**, encouraging the model to be more accurate.
 
-### **3 Optimization: Gradient Descent**
+### **3️ Optimization: Gradient Descent**
 To minimize loss, we update weights using **Gradient Descent**:
-\[
-w := w - \alpha \frac{\partial \text{Loss}}{\partial w}
-\]
+```
+w := w - α * (∂Loss / ∂w)
+```
 where:  
-- \( \alpha \) is the **learning rate**  
-- \( \frac{\partial \text{Loss}}{\partial w} \) is the **gradient of the loss function**  
+- `α` is the **learning rate**  
+- `∂Loss / ∂w` is the **gradient of the loss function**  
 
-### **4 Multi-Class Logistic Regression (Softmax)**
+### **4️ Multi-Class Logistic Regression (Softmax)**
 For **multi-class classification**, Logistic Regression is extended using the **Softmax function**, which outputs probabilities for each class.
 
 ### **5️ When to Use Logistic Regression?**
@@ -95,6 +95,7 @@ For **multi-class classification**, Logistic Regression is extended using the **
 
 ## Visualization
 After training, the script generates the following decision boundary graph:
+
 
 ![Decision Boundary](graph.png)
 
