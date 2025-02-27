@@ -34,7 +34,7 @@ python logistic_regression.py
 
 ## Logistic Regression Explained
 
-### **1️ How It Works**
+### **1 How It Works**
 #### **Step 1: Linear Combination of Inputs**
 Like Linear Regression, Logistic Regression first computes a weighted sum of input features:  
 ```
@@ -56,7 +56,7 @@ This function maps `z` to a value between **0 and 1**, which can be interpreted 
 - If `σ(z) ≥ 0.5`, classify as **1 (Positive Class)**  
 - If `σ(z) < 0.5`, classify as **0 (Negative Class)**  
 
-### **2️ Loss Function: Binary Cross-Entropy**
+### **2 Loss Function: Binary Cross-Entropy**
 Logistic Regression uses **Binary Cross-Entropy (Log Loss)** to measure prediction error:
 ```
 Loss = - (1/m) * Σ [yᵢ log(ŷᵢ) + (1 - yᵢ) log(1 - ŷᵢ)]
@@ -68,7 +68,7 @@ where:
 
 Cross-entropy loss **penalizes incorrect confident predictions heavily**, encouraging the model to be more accurate.
 
-### **3️ Optimization: Gradient Descent**
+### **3 Optimization: Gradient Descent**
 To minimize loss, we update weights using **Gradient Descent**:
 ```
 w := w - α * (∂Loss / ∂w)
@@ -77,15 +77,15 @@ where:
 - `α` is the **learning rate**  
 - `∂Loss / ∂w` is the **gradient of the loss function**  
 
-### **4️ Multi-Class Logistic Regression (Softmax)**
+### **4 Multi-Class Logistic Regression (Softmax)**
 For **multi-class classification**, Logistic Regression is extended using the **Softmax function**, which outputs probabilities for each class.
 
-### **5️ When to Use Logistic Regression?**
-✔️ When the **target variable is binary** (e.g., spam vs. not spam, cancer vs. no cancer).  
-✔️ When **interpretability is important** (weights show feature importance).  
-✔️ When **data is linearly separable** (otherwise, advanced models like Neural Networks work better).  
+### **5 When to Use Logistic Regression?**
+1. When the **target variable is binary** (e.g., spam vs. not spam, cancer vs. no cancer).  
+2. When **interpretability is important** (weights show feature importance).  
+3. When **data is linearly separable** (otherwise, advanced models like Neural Networks work better).  
 
-### **6️ Key Differences from Linear Regression**
+### **6 Key Differences from Linear Regression**
 | Feature  | Logistic Regression | Linear Regression |
 |----------|---------------------|-------------------|
 | **Output** | Probability (0 to 1) | Continuous value |
